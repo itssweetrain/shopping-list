@@ -1,0 +1,135 @@
+* {
+  --font-size: 25px;
+  --font-sizeplus: 35px;
+  --btn-color: rgb(130, 130, 130);
+  --hover-color: rgb(250, 181, 181);
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+body {
+  background-color: rgb(255, 225, 229);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.js-form {
+  position: relative;
+  background-color: rgba(255, 248, 254, 0.5);
+  border-radius: 10%;
+  box-shadow: 5px 15px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.todo-list {
+  width: 400px;
+  height: 400px;
+  /*안에 todo-list의 height을 따로 지정해줘야
+  각각 구역을 지키면서 남의 구역 침범하지 않게 됨
+  footer는 자동으로 밑으로 내려가게 됨 */
+  overflow-y: auto;
+}
+
+.header {
+  height: 13%;
+  border-radius: 30px 30px 0 0;
+  background-color: lightpink;
+}
+
+.footer {
+  height: 20%;
+  width: 100%;
+  border-radius: 0 0 30px 30px;
+  background-color: lightpink;
+
+  display: inline-block;
+  text-align: center;
+}
+
+.input-text {
+  width: 100%;
+  height: 60px;
+  font-size: var(--font-size);
+  border: none;
+  outline: none;
+}
+
+.title {
+  color: white;
+  font-family: "Concert One", cursive;
+  font-size: var(--font-sizeplus);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.plus {
+  font-size: calc(var(--font-sizeplus) * 1.5);
+  color: var(--btn-color);
+  margin-top: 20px;
+}
+
+.plus:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 0.5s;
+  color: var(--hover-color);
+}
+
+.finishedBtn {
+  font-size: var(--font-size);
+  color: var(--btn-color);
+}
+
+.finishedBtn:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  color: var(--hover-color);
+}
+
+.trash {
+  font-size: var(--font-size);
+  color: var(--btn-color);
+  padding-right: 30px;
+}
+
+.trash:hover {
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+  color: var(--hover-color);
+}
+
+.list {
+  list-style: none;
+}
+
+.items {
+  font-size: var(--font-size);
+  font-family: "Concert One", cursive;
+  color: rgb(143, 124, 124);
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+  /*justify는 두 요소가 container안에 쌓여있어야한다*/
+  padding-right: 15px;
+}
+
+.divider {
+  /* position: absolute;
+  display: block; */ /*이렇게 하면..todo-list밖으로 나간다*/
+  width: 90%;
+  height: 1px;
+  background-color: lightgray;
+  margin-top: 20px;
+}
+
+.checkDone {
+  text-decoration: line-through;
+  text-decoration-color: var(--hover-color);
+}
